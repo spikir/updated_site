@@ -15,7 +15,7 @@
     
     body {
         height: 100vh!important;
-        width: 100vw;
+        width: 100%;
         background: rgb(29,30,24);
         /*background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);*/
     }
@@ -75,7 +75,7 @@
         text-decoration: none;
         list-style: none;
         height: 100vh;
-        width: 100vw;
+        width: 100%;
         position: relative;
     }
 
@@ -191,7 +191,7 @@
 
     .home {
         height: 100vh;
-        width: 100vw;
+        width: 100%;
         justify-content: center;
         display: flex;
         position: relative;
@@ -372,7 +372,7 @@
     }
 
     .workCont {
-        width: 100vw;
+        width: 100%;
         min-height: 500px;
         display: flex;
         flex-direction: row;
@@ -404,7 +404,7 @@
 
     .box {
         min-height: 100%;
-        width: 100vw;
+        width: 100%;
         justify-content: center;
         align-items: center;
         display: flex;
@@ -457,13 +457,32 @@
     .item {
         background-color: rgb(207,168,60);
         color: white;
-        width: 100%;
         height: 200px;
-        min-width: 400px;
-        max-width: 600px;
+        width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        border-radius: 10px;
+    }
+
+    .module-border-wrap-left {
+        padding: 1rem;
+        position: relative;
+        background: linear-gradient(to right, red, orange);
+        padding: 3px;
+        border-radius: 10px;
+        min-width: 400px;
+        max-width: 600px;
+    }
+
+    .module-border-wrap-right {
+        padding: 1rem;
+        position: relative;
+        background: linear-gradient(to left, red, orange);
+        padding: 3px;
+        border-radius: 10px;
+        min-width: 400px;
+        max-width: 600px;
     }
 
     .itemContent {
