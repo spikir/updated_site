@@ -8,7 +8,9 @@
         <title>Simple Design</title>
         <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
         <link rel="stylesheet" href="css/style.css" type="text/css"/>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     </head>
     <body>
         <div class="loading">
@@ -70,15 +72,96 @@
 
                         </div>
                         <div class="aboutBox">
-                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+                            <p>I am a programmer from Switzerland. My name is Sergey.</p>
+                            <p>I live in a small town named Winterthur near Zurich. My hobby is coding and I do it on my own.</p>
+                            <p>Code capabilities that I have are different.</p>
+                            <p>My coding skills are</p>
+                            <ul>
+                                <li>JavaScript (jQuery, reactJS, react native)</li>
+                                <li>PHP</li>
+                                <li>HTML/CSS</li>
+                                <li>Omnis Studio</li>
+                                <li>Java</li>
+                            </ul>
+                            <p>Furthermore, I adopted some knowledge about design patterns and web services.</p>
+                            <ul>
+                                <li>GoF OOP design patterns</li>
+                                <li>Web services (Rest, SOA)</li>
+                            </ul>
+                            <p>
+                                Software architecture is really challenging and that what I learn now to become a Fullstack Developer.
+                            </p>
                         </div>
                     </div>    
                     <div class="aboutBackgroundPic"></div>
                 </div>
-                <div class="work">
+                <div class="work aos-all">
                     <h2 class="boxTitle"><span class="titleLine">Work</span></h2>
-                    <div class="box">
-                    </div>    
+                    <div class="workCont">
+                        <div class="leftBox">
+                            <div class="item aos-item" data-aos="zoom-out-right">
+                                <img src="img/shotsnapp-1597319372.616.png" width="220px" height="200px" />
+                                <div class="itemContent">
+                                    <p>
+                                        A nice website with similar style as big magazin Vogue has. Mobile friendly and dynamic.
+                                        <br><br>
+                                        Technology
+                                    </p>
+                                    <ul>
+                                        <li>Frontend: HTML/CSS</li>
+                                        <li>Engine JavaScript: ReactJS</li>
+                                        <li>Database noSQL: Firebase</li>
+                                    </ul>
+                                </div>
+                            </div> 
+                            <div class="item aos-item" data-aos="zoom-out-right">
+                                <img src="img/shotsnapp-1597321343.702.png" width="267px" height="200px" />
+                                <div class="itemContent">
+                                    <p>
+                                        Mobile application on expo for android devices.
+                                        <br><br>
+                                        Technology
+                                    </p>
+                                    <ul>
+                                        <li>Frontend: HTML/CSS</li>
+                                        <li>Engine JavaScript: React Native</li>
+                                        <li>Backend (API): PHP</li>
+                                        <li>Database MySQL</li>
+                                    </ul>
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="rightBox">
+                            <div class="item aos-item" data-aos="zoom-out-left">
+                                <div class="itemContent">
+                                    <p>
+                                        First attempt of personal website which was build as static site. Mobile friendly.
+                                        <br><br>
+                                        Technology
+                                    </p>
+                                    <ul>
+                                        <li>Frontend: HTML/CSS</li>
+                                        <li>JavaScript: jQuery</li>
+                                    </ul>
+                                </div>
+                                <img src="img/shotsnapp-1597320200.036.png" width="286px" height="200px" />
+                            </div>  
+                            <div class="item aos-item" data-aos="zoom-out-left">
+                                <div class="itemContent">
+                                    <p>
+                                        Mobile friendly personal website with a lot of colors.
+                                        <br><br>
+                                        Technology
+                                    </p>
+                                    <ul>
+                                        <li>Frontend: HTML/CSS</li>
+                                        <li>JavaScript: jQuery</li>
+                                    </ul>
+                                </div>
+                                <img src="img/shotsnapp-1597321788.736.png" width="267px" height="200px" />
+                            </div> 
+                        </div> 
+                    </div> 
                 </div>
                 <div class="contact">
                     <h2 class="boxTitle"><span class="titleLine">Contact</span></h2>
@@ -89,5 +172,11 @@
             </div>
         </div>
         <script type="text/javascript" src="js/engine.js"></script>
+        <script>
+            AOS.init({
+              easing: 'ease-in-out-sine',
+              duration: 2000,
+            });
+          </script>
     </body>
 </html>
