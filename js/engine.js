@@ -1,17 +1,20 @@
 $('.wrapper').css('opacity', 0);
 const navList = document.querySelector('.naviList');
 const pseudoBeforeWidth = getComputedStyle(navList, ':before').height;
-$('.badge').css('width', pseudoBeforeWidth);
-
-$(window).on("load", function() {
-    $('.loader').css('opacity', 0);
-    $('.wrapper').css('opacity',1);
-});
-
 const stickyNavWidth = 547;
 let leftPosStickyNav = (window.innerWidth-stickyNavWidth)/2;
 let menuMove = false;
-console.log(window.innerWidth);
+let array = [];
+$('.badge').css('width', pseudoBeforeWidth);
+
+$(window).on("load", function() {
+    
+    $(".naviList a").each(function(){
+        array.push([$(this).attr("href"), false]);
+    });
+    $('.loader').css('opacity', 0);
+    $('.wrapper').css('opacity',1);
+});
 
 $(document).scroll(function(e) {
     windowPos = $(window).scrollTop();
@@ -22,7 +25,16 @@ $(document).scroll(function(e) {
         moveNaviBack();
         menuMove = false;
     }
-
+    for(let i = 0; i<array.length; i++) {
+        if($(document).scrollTop()>$(array[i][0]).offset().top-window.innerHeight+400) {
+            array[i][1]=true;
+            let pos = array[i][0].indexOf('Wrap');
+            $('.'+array[i][0].substring(1, pos)).addClass('box-unblur');
+        } else if($(document).scrollTop()<$(array[i][0]).offset().top &&  array[i][1]==true) {
+            array[i][1]=false;
+        }
+        console.log(array);
+    }
 });
 
 function moveNaviBack() {
